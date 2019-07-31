@@ -1,6 +1,7 @@
 body {
     height: 100vh;
-    background-color: rgb(65, 147, 255);
+    font-family: 'Pangolin', cursive;
+    background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
@@ -10,6 +11,27 @@ body {
         ". makeTots makeBattery . . . . . . ."
         ". . . . . . . . . ."
         "goldCoins totalPotato tots battery . . . . . .";
+}
+
+button {
+    border-radius: 50%;
+
+}
+
+.potato {
+    background-color: #70C1B3;
+}
+
+.tot {
+    background-color: #B2DBBF;
+}
+
+.gold {
+    background-color: #F3FFBD;
+}
+
+.batteries {
+    background-color: #247BA0;
 }
 
 .title {
@@ -58,7 +80,7 @@ body {
 
 .battery {
     grid-area: battery;
-    display: none;
+    
 }
 
 .make-battery {

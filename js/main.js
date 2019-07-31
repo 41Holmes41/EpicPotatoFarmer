@@ -25,7 +25,8 @@ let battery = {
     goldPrice : 20,
     storage : 5,
     storageIncrease : 1,
-    storageIncreasePrice : 10
+    storageIncreasePrice : 10,
+    present : 0
 };
 let electricity = {
     number : 0
@@ -82,6 +83,7 @@ $('.make-battery').click(function(){
     gold.number = gold.number - battery.goldPrice;
     battery.number = battery.number + 1 ;
     electricity.number += 1;
+    battery.present=1;
     render();
 })
 
@@ -123,15 +125,15 @@ function render(){
 
 
 
-    if (battery.number > 0) $('.battery').fadeIn();
-    else $('.battery').fadeOut();
+    if (battery.number > 0) $('.battery-count').fadeIn();
+    else $('.battery-count').fadeOut();
 
     $('.battery-count').html(`${battery.number} / ${battery.storage} Potato Batteries`);
 
     if ((gold.number >= battery.goldPrice)  && (battery.storage > battery.number)) $('.make-battery').fadeIn();
     else $('.make-battery').fadeOut(); 
 
-    if(gold.number >= battery.storageIncreasePrice) $('.upgrade-battery-storage').fadeIn();
+    if((gold.number >= battery.storageIncreasePrice) && (battery.present === 1)) $('.upgrade-battery-storage').fadeIn();
     else $('.upgrade-battery-storage').fadeOut();
 
 
