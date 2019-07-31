@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    background-color: rgb(65, 147, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas:
+        ". . . title title title title . . ."
+        ". growPotato upgradePotato upgradePotatoStorage . . . . . ."
+        ". makeTots makeBattery . . . . . . ."
+        ". . . . . . . . . ."
+        "goldCoins totalPotato tots battery . . . . . .";
+}
+
+.title {
+    grid-area: title;
+    background-color: green;
+}
+
+.grow-potato {
+    grid-area: growPotato;
+}
+
+.total-potato {
+    grid-area: totalPotato;
+}
+
+.upgrade-potato {
+    grid-area: upgradePotato;
+    display: none;
+}
+
+.tots {
+    grid-area: tots;
+}
+
+.sell-tots {
+    display: none;
+}
+
+.upgrade-tots-storage {
+    display: none;
+}
+
+.make-tots {
+    grid-area: makeTots;
+    display: none;
+}
+
+.gold-coins {
+    grid-area: goldCoins;
+}
+
+.upgrade-potato-storage {
+    grid-area: upgradePotatoStorage;
+
+}
+
+.battery {
+    grid-area: battery;
+    display: none;
+}
+
+.make-battery {
+    grid-area: makeBattery;
+    display: none;
+    
+}
+
+.upgrade-battery-storage {
+    display: none;
+}
